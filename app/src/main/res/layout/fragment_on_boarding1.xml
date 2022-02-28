@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:id="@+id/onboardingLayout"
+   >
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      android:layout_weight="30"
+        android:paddingTop="20dp"
+        android:layout_gravity="center"/>
+
+
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+          app:ci_drawable="@drawable/circle_radius_selected"
+            app:ci_drawable_unselected="@drawable/circle_radius_unselected"
+            android:layout_weight="1"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+
+            />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Onboarding_button"
+      android:layout_weight="1"
+        android:layout_marginBottom="79dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"
+        android:padding="8dp"
+        android:backgroundTint="@color/Cerise_red"
+        />
+</LinearLayout>

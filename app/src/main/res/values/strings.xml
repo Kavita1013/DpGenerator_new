@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">DpGenerator</string>
+    <string name="Onboarding_src1">Choose from a variety of art styles and geometric designs</string>
+    <string name="Onboarding_src2">Upload any picture and convert it to the art style of your liking</string>
+    <string name="Onboarding_src3">Extract colours from any picture onto your geometric designs or get creative and make your own colour palette</string>
+    <string name="Onboarding_src4">Voila! Your very own personalised Display Picture is ready</string>
+    <string name="Onboarding_button"><b>Next</b></string>
+    <string name="Forget_password">Forgot Password ?</string>
+    <string name="Login">Sign In</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="Style1">Art Styles</string>
+    <string name="Style2">Geometric Designs</string>
+    <string name="Screen1_Appbar">Home</string>
+    <string name="Screen2_appbar">Downloads</string>
+    <string name="Screen3_appbar">Profile</string>
+    <string name="Upload_screen">Upload an image to be converted into a wallpaper</string>
+    <string name="Upload_Button">Upload Image</string>
+    <string name="Artistic_text1">Choose your taste</string>
+    <string name="Artistic_text2">Select the preferred art style of your choice</string>
+    <string name="Geometric_text1">Select the geometric design of your choice</string>
+    <string name="Color_palete">Make your own colour palette for your wallpaper</string>
+    <string name="Color_palete_button">Select Colours</string>
+    <string name="Edit">Edit</string>
+    <string name="Account">Account</string>
+    <string name="Username">Username</string>
+    <string name="Design_Preferance">Design Preferance</string>
+    <string name="PicSize">Picture size</string>
+    <string name="LogOut">Log out</string>
+    <string name="Selected">selected</string>
+    <string name="Delete">Delete</string>
+    <string name="SignUpPrompt">Don’t haven’t an account ? <b> Sign Up </b></string>
+    <string name="SignInPrompt">Already a member ?  <b> Sign In </b></string>
+    <string name="Geometric_Design">Geometric design</string>
+    <string name="Geometric_Design_Text">Select a colour palette</string>
+    <string name="Geometric_Design_text2">Upload an image through which colours can be extracted</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

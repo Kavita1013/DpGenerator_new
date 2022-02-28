@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "707013758791",
+    "project_id": "dpgenerator-d0317",
+    "storage_bucket": "dpgenerator-d0317.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707013758791:android:f35ca0c9f610396c938662",
+        "android_client_info": {
+          "package_name": "kavita.myappcompany.dpgenerator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707013758791-fepvr73r6po50h9dvrgourg6c0115kf7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHxOwmsSzxgCIKcq8offuZyRXfDBTC8_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "707013758791-fepvr73r6po50h9dvrgourg6c0115kf7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
