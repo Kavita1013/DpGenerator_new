@@ -2,6 +2,7 @@ package kavita.myappcompany.dpgenerator.Fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.text.TextUtils.replace
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,9 +32,10 @@ class OnBoarding1Fragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var slider: ViewPager2
-    private lateinit var dotsLayout: LinearLayout
+   private var fragmentSignUpFragment: Fragment? =  null
+    private var fragmentLoginFragment: Fragment? =  null
     private lateinit var  slideadapter : SlideAdapter
-    private var dots: Array<TextView?>? = null
+
     private lateinit var layouts :Array<Int>
     private val slideChangeListener = object : ViewPager.OnPageChangeListener {
         override fun onPageScrolled(
@@ -98,9 +100,11 @@ class OnBoarding1Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         if (!isFirstLaunch()) {
-            var fr = getFragmentManager()?.beginTransaction()
-            fr?.replace(R.id.FrameLayout, LoginFragment())
-            fr?.commit()
+            fragmentLoginFragment =LoginFragment()
+            val fragmentManager = parentFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.FrameLayout, fragmentLoginFragment as LoginFragment).commit()
+            SharedPref.getInstance(context).setIsFirstLaunchToFalse()
         }
 
         postToList()
@@ -112,9 +116,10 @@ class OnBoarding1Fragment : Fragment() {
         SharedPref.getInstance(context).setIsFirstLaunchToFalse()
         val Next =view.findViewById<Button>(R.id.button2)
 Next.setOnClickListener{view->
-    var fr = getFragmentManager()?.beginTransaction()
-    fr?.replace(R.id.FrameLayout, SignUpFragment())
-    fr?.commit()
+    fragmentSignUpFragment =SignUpFragment()
+    val fragmentManager = parentFragmentManager
+    val fragmentTransaction = fragmentManager.beginTransaction()
+    fragmentTransaction.replace(R.id.FrameLayout, fragmentSignUpFragment as SignUpFragment).commit()
     SharedPref.getInstance(context).setIsFirstLaunchToFalse()
 }
     }

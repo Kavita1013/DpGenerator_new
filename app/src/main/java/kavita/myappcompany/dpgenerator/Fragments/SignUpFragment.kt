@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.Observer
@@ -33,7 +34,8 @@ class SignUpFragment : Fragment() {
     private lateinit var Button:Button
     private lateinit var email:EditText
     private lateinit var password :EditText
-
+private lateinit var login:TextView
+    private var fragmentLoginFragment: Fragment? =  null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -54,8 +56,16 @@ class SignUpFragment : Fragment() {
         Button=view.findViewById(R.id.button)
         email=view.findViewById(R.id.email)
         password=view.findViewById(R.id.password)
+        login=view.findViewById(R.id.textView4)
         Button.setOnClickListener {
             signUp()
+        }
+        login.setOnClickListener { view ->
+            fragmentLoginFragment =LoginFragment()
+            val fragmentManager = parentFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.FrameLayout, fragmentLoginFragment as LoginFragment).commit()
+            SharedPref.getInstance(context).setIsFirstLaunchToFalse()
         }
         return view
     }

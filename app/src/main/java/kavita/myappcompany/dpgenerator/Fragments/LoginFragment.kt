@@ -39,7 +39,7 @@ private lateinit var signup:TextView
     private lateinit var button : Button
     private lateinit var email:EditText
     private lateinit var password :EditText
-
+    private var fragmentSignUpFragment: Fragment? =  null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -75,9 +75,10 @@ return view
         password=view.findViewById(R.id.passwordLogin)
 signup = view.findViewById(R.id.textView4)
         signup.setOnClickListener { view ->
-            var fr = getFragmentManager()?.beginTransaction()
-            fr?.replace(R.id.FrameLayout, SignUpFragment())
-            fr?.commit()
+            fragmentSignUpFragment =SignUpFragment()
+            val fragmentManager = parentFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.FrameLayout, fragmentSignUpFragment as SignUpFragment).commit()
         }
     }
     companion object {

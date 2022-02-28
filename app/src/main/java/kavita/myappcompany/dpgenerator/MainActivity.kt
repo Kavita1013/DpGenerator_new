@@ -12,8 +12,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         fragmentOnBoarding =OnBoarding1Fragment()
-        val fragmentManager = supportFragmentManager
+         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.FrameLayout, fragmentOnBoarding as OnBoarding1Fragment).commit()
     }
+
 }
